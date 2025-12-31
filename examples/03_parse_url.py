@@ -7,7 +7,7 @@ from urllib.parse import urlparse, parse_qs
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--url", default="https://www.opensanctions.org/search/?q=kim")
+    ap.add_argument("--url", default="https://www.google.com/search?q=%EC%A0%9C%EC%95%BC%EC%9D%98+%EC%A2%85&oq=&gs_lcrp=EgZjaHJvbWUqCQgAECMYJxjqAjIJCAAQIxgnGOoCMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgFECMYJxjqAjIJCAYQIxgnGOoCMgkIBxAjGCcY6gLSAQkyNjkzajBqMTWoAgiwAgHxBfogkU__6kMr&sourceid=chrome&ie=UTF-8")
     args = ap.parse_args()
 
     u = urlparse(args.url)
