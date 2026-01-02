@@ -5,7 +5,7 @@
 from __future__ import annotations
 import argparse, socket, time
 
-ALLOWLIST = {"example.com", "127.0.0.1", "localhost"}
+ALLOWLIST = {"127.0.0.1", "localhost"}
 
 def check(host: str, port: int, timeout: float) -> bool:
     try:
@@ -16,7 +16,7 @@ def check(host: str, port: int, timeout: float) -> bool:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--host", default="example.com")
+    ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--ports", default="80,443,8080")
     ap.add_argument("--timeout", type=float, default=0.8)
     args = ap.parse_args()
