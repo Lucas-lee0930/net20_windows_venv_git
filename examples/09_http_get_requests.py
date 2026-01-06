@@ -6,7 +6,7 @@ import argparse, requests
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--url", default="https://example.com")
+    ap.add_argument("--url", default="https://naver.com")
     args = ap.parse_args()
 
     r = requests.get(args.url, timeout=3, headers={"User-Agent": "Net20-requests"})
